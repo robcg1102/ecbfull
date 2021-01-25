@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var serviceCarController = require("../controllers/serviceCar.controller");
+var router = express_1.Router();
+router.get("/services", serviceCarController.getServices);
+router.get("/services/:id", serviceCarController.getService);
+router.post("/services", serviceCarController.createService);
+router.put("/services/:id", serviceCarController.updateService);
+router["delete"]("/services/:id", serviceCarController.deleteService);
+exports["default"] = router;

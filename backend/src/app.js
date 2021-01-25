@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var config_1 = require("./config");
+var cors_1 = require("cors");
+var serviceCar_routes_1 = require("./routes/serviceCar.routes");
+var app = express_1["default"]();
+app.set("port", config_1["default"].PORT);
+app.use(cors_1["default"]());
+app.use(express_1["default"].json());
+app.use(express_1["default"].urlencoded({ extended: false }));
+app.use(serviceCar_routes_1["default"]);
+exports["default"] = app;

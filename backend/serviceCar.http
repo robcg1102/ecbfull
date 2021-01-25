@@ -1,0 +1,29 @@
+@api = http://localhost:4000
+
+GET {{api}}/services
+
+###
+GET {{api}}/services/600dc82f7608ec98581dd111
+
+### CREATE A SERVICE
+POST {{api}}/services
+Content-Type: application/json
+
+{
+    "description": "last service",
+    "make": "veamos otro",
+    "model": "Other",
+    "image": "asdsad"
+}
+
+###
+DELETE {{api}}/services/600cfb2b2b74d22f90cda761
+
+###
+PUT {{api}}/services/600cfee312497f4becfa5f43
+Content-Type: application/json
+
+{
+    "description": "description updated",
+    "make": "other company"
+}
